@@ -10,9 +10,8 @@
     "username": "yifeugsphjjtjt",
     "password": "17cea28b05143a1ea401c9a4ea3b940aae9d481ab653adda3760489eab2f6907",
     "database": "d1gp0u36is4tg4",
-    "host": "3.85.86.201",
+    "host": "54.161.75.193",
     "dialect": "postgres",
-    "use_env_variable": "DATABASE_URL",
     "ssl": {
       "rejectUnauthorized": false
     }
