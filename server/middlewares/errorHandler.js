@@ -7,7 +7,7 @@ module.exports = (err, req, res, next) => {
       }
       break
     case "SequelizeValidationError":
-      res.status(401).json({ msg: err.errors[0].message })
+      res.status(400).json({ msg: err.errors[0].message })
       break
     case "invalidAcoount":
       res.status(401).json({ msg: "Invalid email / Password" })
