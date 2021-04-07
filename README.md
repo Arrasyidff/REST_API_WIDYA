@@ -53,6 +53,14 @@ This time I got a project to create a simple register & login API
 - **Bad Response**
 
   - status: 400
+  - If name empty
+  ```json
+  {
+    "msg": "name can't be empty"
+  }
+  ```
+
+  - status: 400
   - If name less than 5 character
   ```json
   {
@@ -60,8 +68,16 @@ This time I got a project to create a simple register & login API
   }
   ```
 
+  - status: 400
+  - If email empty
+  ```json
+  {
+    "msg": "email can't be empty"
+  }
+  ```
+
   - status: 401
-  - If email already exist
+  - If email already exist, because email is unique type
   ```json
   {
     "msg": "email already exist"
@@ -77,10 +93,18 @@ This time I got a project to create a simple register & login API
   ```
 
   - status: 400
+  - If password empty
+  ```json
+  {
+    "msg": "password can't be empty"
+  }
+  ```
+
+  - status: 400
   - If password less than 5 character
   ```json
   {
-    "msg": "email must be email format"
+    "msg": "password min 5 character"
   }
   ```
 
