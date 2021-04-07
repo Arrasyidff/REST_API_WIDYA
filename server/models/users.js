@@ -22,8 +22,10 @@ module.exports = (sequelize, DataTypes) => {
       name: {
         type: DataTypes.STRING,
         validate: {
-          notEmpty: {
-            msg: "name can't be empty"
+          validateEmptyChar(value) {
+            if (!value) {
+              throw new Error("name can't character")
+            }
           },
           validateMinChar(value) {
             if (value.length < 5) {
@@ -35,8 +37,10 @@ module.exports = (sequelize, DataTypes) => {
       email: {
         type: DataTypes.STRING,
         validate: {
-          isEmail: {
-            msg: "email must be email format"
+          validateEmptyChar(value) {
+            if (!value) {
+              throw new Error("email can't character")
+            }
           },
           notEmpty: {
             msg: "email can't be empty"
@@ -46,8 +50,10 @@ module.exports = (sequelize, DataTypes) => {
       password: {
         type: DataTypes.STRING,
         validate: {
-          notEmpty: {
-            msg: "password can't be empty"
+          validateEmptyChar(value) {
+            if (!value) {
+              throw new Error("password can't character")
+            }
           },
           validateMinChar(value) {
             if (value.length < 5) {
