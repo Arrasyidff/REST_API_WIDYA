@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
         validate: {
           validateEmptyChar(value) {
             if (!value) {
-              throw new Error("name can't character")
+              throw new Error("name can't be empty")
             }
           },
           validateMinChar(value) {
@@ -39,7 +39,7 @@ module.exports = (sequelize, DataTypes) => {
         validate: {
           validateEmptyChar(value) {
             if (!value) {
-              throw new Error("email can't character")
+              throw new Error("email can't be empty")
             }
           },
           notEmpty: {
@@ -52,7 +52,7 @@ module.exports = (sequelize, DataTypes) => {
         validate: {
           validateEmptyChar(value) {
             if (!value) {
-              throw new Error("password can't character")
+              throw new Error("password can't be empty")
             }
           },
           validateMinChar(value) {
